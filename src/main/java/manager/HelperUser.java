@@ -33,7 +33,7 @@ public class HelperUser extends HelperBase{
        /* WebElement element = wd.findElement(By.cssSelector(".dialog-container>h2"));
           String text =  element.getText();
 */
-        //  pause(2000);
+         pause(2000);
         //  return text;
 
        // WebElement element = wd.findElement(By.cssSelector(".dialog-container>h2"));
@@ -54,6 +54,17 @@ public class HelperUser extends HelperBase{
 
     public void clickOKButton() {
         click(By.xpath("//button[text()='Ok']"));
+
+    }
+
+    public boolean isLogged() {
+        return isElementPresent(By.xpath("//*[text()=' Logout ']"));
+        
+    }
+
+
+    public void logout() {
+        click(By.xpath("//*[text()=' Logout ']"));
 
     }
 }
